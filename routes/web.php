@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CastController;
 use App\Http\Controllers\FilmController;
+use App\Http\Controllers\PeranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +56,11 @@ Route::post('/film', [FilmController::class,'store']);
 Route::get('/film/{film_id}/edit', [FilmController::class,'edit']);
 Route::put('/film/{film_id}', [FilmController::class,'update']);
 Route::delete('/film/{film_id}', [FilmController::class,'destroy']);
+
+// CRUD PERAN
+Route::get('/peran', [PeranController::class,'index']);
+Route::get('/peran/create', [PeranController::class,'create']);
+Route::post('/peran', [PeranController::class,'store']);
+Route::get('/peran/{peran_id}/edit', [PeranController::class,'edit']);
+Route::put('/peran/{peran_id}', [PeranController::class,'update']);
+Route::delete('/peran/{peran_id}', [PeranController::class,'destroy']);
